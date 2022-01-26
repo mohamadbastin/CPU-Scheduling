@@ -13,9 +13,13 @@ class SJF:
     idle_time = 0
 
     @classmethod
-    def run(cls, processes: List[Process]):
+    def set_processes(cls, processes):
         for i in processes:
             cls.not_started_queue.append(i)
+
+    @classmethod
+    def run(cls):
+
         t = 0
 
         while len(cls.not_started_queue) > 0 or len(cls.waiting_queue) > 0 or len(

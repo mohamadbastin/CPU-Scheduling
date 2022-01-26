@@ -14,9 +14,13 @@ class RoundRobin:
     idle_time = 0
 
     @classmethod
-    def run(cls, processes: List[Process]):
+    def set_processes(cls, processes):
         for i in processes:
             cls.not_started_queue.append(i)
+
+    @classmethod
+    def run(cls):
+
         t = 0
         tq = 5
         ti = 0
