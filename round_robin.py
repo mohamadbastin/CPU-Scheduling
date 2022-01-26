@@ -89,3 +89,7 @@ class RoundRobin:
             t += 1
             ti += 1
         Process.set_total_idle_time(cls.total_time, cls.idle_time)
+
+
+class RoundRobin2(RoundRobin):
+    a = 1

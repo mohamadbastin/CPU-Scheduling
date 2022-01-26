@@ -1,6 +1,6 @@
 from pprint import pprint
 
-from round_robin import RoundRobin
+from round_robin import RoundRobin, RoundRobin2
 from sjf import SJF
 from srt import SRT
 from utils import Process, PreProcess
@@ -25,5 +25,10 @@ PreProcess.read_and_create_processes()
 
 RoundRobin.run(Process.get_all_processes())
 Process.display("Round Robin")
+Process.reset_processes()
+print("+" * 100)
+
+RoundRobin2.run(Process.get_all_processes())
+Process.display("Round Robin 2")
 Process.reset_processes()
 print("+" * 100)

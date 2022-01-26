@@ -69,7 +69,7 @@ class Process:
 
     @classmethod
     def display(cls, algo):
-        print(f"{algo} Algorithm")
+        print(f"{algo} Algorithm\n")
         print("pid", "start", "end", "response", "", "waiting", "turnaround", sep='    ')
         i: Process
         for i in cls._processes:
